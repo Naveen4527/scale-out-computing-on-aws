@@ -41,7 +41,7 @@ Config:
   # Configure your Storage options below
   storage:
     data:
-      provider: "efs" # efs or fsx_lustre
+      provider: "fsx_lustre" # efs or fsx_lustre
       kms_key_id: False # Specify your own CMK to encrypt EFS or FSx_Lustre file system. If set to False encryption will be managed by the default AWS key
       efs:
         throughput_mode: "bursting" # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-throughputmode
@@ -57,7 +57,7 @@ Config:
          storage_type: "SSD" # Allowed values: SSD or HDD. https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-storagetype
 
     apps:
-      provider: "efs" # efs or fsx_lustre
+      provider: "fsx_lustre" # efs or fsx_lustre
       kms_key_id: False # Specify your own CMK to encrypt EFS or FSx_Lustre file system. If set to False encryption will be managed by the default AWS key
       efs:
          throughput_mode: "bursting" # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-throughputmode
